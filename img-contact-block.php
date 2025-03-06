@@ -26,13 +26,16 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function imagewize_contact_block_init() {
-	// Register the block using the block.json metadata from build directory
-	register_block_type( __DIR__ . '/build/img-contact-block', array(
-		'editor_script' => 'img-contact-block-editor-script',
-		'editor_style'  => 'img-contact-block-editor-style',
-		'style'         => 'img-contact-block-style',
-		'render_callback' => 'imagewize_contact_block_render_callback',
-	) );
+	// Option 1: Register using block.json from build directory (preferred)
+	register_block_type( __DIR__ . '/build/contact-block' );
+	
+	// Option 2: If the above doesn't work, register with direct namespace
+	// register_block_type( 'imagewize/img-contact-block', array(
+	//     'editor_script' => 'img-contact-block-editor-script',
+	//     'editor_style'  => 'img-contact-block-editor-style',
+	//     'style'         => 'img-contact-block-style',
+	//     'render_callback' => 'imagewize_contact_block_render_callback',
+	// ) );
 	
 	// Enqueue script data
 	add_action( 'wp_enqueue_scripts', 'img_contact_block_enqueue_view_script_data' );
@@ -55,7 +58,7 @@ function imagewize_contact_block_render_callback( $attributes, $content ) {
  */
 function img_contact_block_enqueue_view_script_data() {
 	wp_localize_script(
-		'imagewize-img-contact-block-view-script',
+		'img-contact-block-view-script',  // Updated script handle to match block.json
 		'imgContactFormData',
 		array(
 			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
