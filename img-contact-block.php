@@ -26,7 +26,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function imagewize_contact_block_init() {
-	register_block_type( __DIR__ . '/build/img-contact-block' );
+	// Register the block using the block.json metadata from build directory
+	register_block_type( __DIR__ . '/build/img-contact-block', array(
+		'editor_script' => 'img-contact-block-editor-script',
+		'editor_style'  => 'img-contact-block-editor-style',
+		'style'         => 'img-contact-block-style',
+		'render_callback' => 'imagewize_contact_block_render_callback',
+	) );
 	
 	// Enqueue script data
 	add_action( 'wp_enqueue_scripts', 'img_contact_block_enqueue_view_script_data' );
@@ -34,6 +40,14 @@ function imagewize_contact_block_init() {
 	// Register AJAX handlers
 	add_action( 'wp_ajax_img_contact_form_submission', 'img_contact_form_submission_handler' );
 	add_action( 'wp_ajax_nopriv_img_contact_form_submission', 'img_contact_form_submission_handler' );
+}
+
+/**
+ * Render callback function
+ */
+function imagewize_contact_block_render_callback( $attributes, $content ) {
+	// You can add server-side rendering code here if needed
+	return $content;
 }
 
 /**
