@@ -4,7 +4,7 @@
 	"name": "create-block/contact-block",
 	"version": "0.1.0",
 	"title": "Contact Block",
-	"category": "widgets",
+	"category": "media",
 	"icon": "email",
 	"description": "A customizable contact form block.",
 	"example": {},
