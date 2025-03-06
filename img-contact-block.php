@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function imagewize_contact_block_init() {
-	register_block_type( __DIR__ . '/build/contact-block' );
+	register_block_type( __DIR__ . '/build/img-contact-block' );
 	
 	// Enqueue script data
 	add_action( 'wp_enqueue_scripts', 'img_contact_block_enqueue_view_script_data' );
