@@ -1,8 +1,8 @@
 {
-	"name": "contact-block",
+	"name": "img-contact-block",
 	"version": "0.1.0",
-	"description": "A customizable contact form block for WordPress.",
-	"author": "Jasper Frumau",
+	"description": "A customizable contact form block for WordPress by Imagewize.",
+	"author": "Jasper Frumau <jasper@imagewize.com>",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {

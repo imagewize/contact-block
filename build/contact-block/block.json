@@ -1,12 +1,12 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "create-block/contact-block",
+  "name": "imagewize/img-contact-block",
   "version": "0.1.0",
-  "title": "Contact Block",
-  "category": "widgets",
+  "title": "Imagewize Contact Form",
+  "category": "media",
   "icon": "email",
-  "description": "A customizable contact form block.",
+  "description": "A customizable contact form block by Imagewize.",
   "example": {},
   "supports": {
     "html": false
@@ -37,7 +37,7 @@
       "default": ""
     }
   },
-  "textdomain": "contact-block",
+  "textdomain": "img-contact-block",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
