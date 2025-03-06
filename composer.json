@@ -1,6 +1,6 @@
 {
-    "name": "imagewize/contact-block",
-    "description": "WordPress block plugin for displaying a form",
+    "name": "imagewize/img-contact-block",
+    "description": "A customizable contact form block for WordPress by Imagewize",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "authors": [
@@ -11,25 +11,6 @@
         }
     ],
     "require": {
-        "php": ">=8.0",
-        "composer/installers": "^2.0"
-    },
-    "config": {
-        "allow-plugins": {
-            "composer/installers": true
-        }
-    },
-    "minimum-stability": "stable",
-    "keywords": [
-        "wordpress",
-        "plugin",
-        "block-editor",
-        "gutenberg",
-        "contact",
-        "profile"
-    ],
-    "support": {
-        "issues": "https://github.com/imagewize/contact-block/issues",
-        "source": "https://github.com/imagewize/contact-block"
+        "php": ">=7.4"
     }
 }
